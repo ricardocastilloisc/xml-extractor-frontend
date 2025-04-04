@@ -54,7 +54,10 @@ const emit = defineEmits(['file-selected', 'clear-file'])
 // 📥 Propiedad que representa el archivo seleccionado
 // Prop that holds the currently selected file
 const props = defineProps({
-  selectedFile: File
+  selectedFile: {
+  type: Object,
+  default: null
+}
 })
 
 // 🔗 Referencia al input file oculto (para simular clic)

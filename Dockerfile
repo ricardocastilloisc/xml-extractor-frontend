@@ -1,27 +1,26 @@
-# Imagen base oficial de Node
+# Imagen base con Node.js 18
 FROM node:18-alpine
 
-# Directorio de trabajo dentro del contenedor
+# Establece el directorio de trabajo
 WORKDIR /app
 
-# Copiar los archivos de configuración
+# Copia los archivos de configuración de npm y las dependencias
 COPY package*.json ./
-COPY .npmrc .npmrc
 
-# Instalar las dependencias
+# Instala las dependencias
 RUN npm install
 
-# Copiar el resto del proyecto
+# Copia el resto del código al contenedor
 COPY . .
 
-# Copiar variables de entorno de producción
+# Copia las variables de entorno para producción
 COPY .env.production .env
 
-# Construir la aplicación Nuxt para producción
+# Construye el proyecto
 RUN npm run build
 
-# Exponer el puerto que Nuxt usará por defecto
+# Expone el puerto usado por Nuxt
 EXPOSE 3000
 
-# Comando para iniciar la app en producción
+# Comando para ejecutar la app en modo producción
 CMD ["npm", "run", "preview"]
