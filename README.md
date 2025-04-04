@@ -1,3 +1,4 @@
+
 # 📦 XML Extractor Frontend
 
 **Autor / Author:** Ricardo Orlando Castillo Olivera  
@@ -11,6 +12,10 @@
 Esta es una aplicación frontend desarrollada con **Nuxt 3** y **Bootstrap 5**, que permite a los usuarios subir un archivo `.zip` que contenga múltiples archivos `.xml`.  
 El sistema los envía a un backend en **FastAPI**, donde se procesan y se extraen los datos de cada XML como un objeto **JSON dinámico**.  
 El resultado se visualiza directamente en pantalla, con opciones para copiar, descargar o ver en pantalla completa.
+
+This is a frontend app built with **Nuxt 3** and **Bootstrap 5**, allowing users to upload a `.zip` file containing multiple `.xml` files.  
+The system sends them to a **FastAPI** backend, where each XML is processed and returned as a **dynamic JSON object**.  
+The result is displayed on screen with options to copy, download, or view it in fullscreen.
 
 ---
 
@@ -36,30 +41,30 @@ El resultado se visualiza directamente en pantalla, con opciones para copiar, de
 
 4. ✅ **Verás el resultado como JSON en un área de texto:**  
    ✅ **The JSON result will appear in a text area:**  
-   - Puedes copiarlo 📋  
-     You can copy it 📋  
-   - Descargarlo como `.json` ⬇️  
-     Download it as a `.json` file ⬇️  
-   - Verlo en pantalla completa 🖥️  
-     View it in fullscreen mode 🖥️
+   - Puedes copiarlo 📋 / You can copy it 📋  
+   - Descargarlo como `.json` ⬇️ / Download it as a `.json` file ⬇️  
+   - Verlo en pantalla completa 🖥️ / View it in fullscreen mode 🖥️
 
 ---
 
 ## ⚙️ Variables de entorno / Environment variables
 
-El archivo `.env` define la URL de la API a consultar.
+El archivo `.env` define la URL de la API a consultar.  
+The `.env` file defines the API endpoint URL to be used.
 
 ```env
 API_URL=http://localhost:8000/procesar-zip/
 ```
 
-Para producción, el archivo `.env.production` se ve así:
+Para producción, el archivo `.env.production` se ve así:  
+For production, the `.env.production` file looks like this:
 
 ```env
 API_URL=https://xml-extractor-api.fly.dev/procesar-zip/
 ```
 
-Nuxt detecta automáticamente el entorno para usar la variable adecuada.
+Nuxt detecta automáticamente el entorno para usar la variable adecuada.  
+Nuxt automatically detects the environment to use the appropriate variable.
 
 ---
 
@@ -77,13 +82,17 @@ npm run dev
 ## ☁️ Despliegue en Fly.io / Deploy on Fly.io
 
 Este proyecto puede ser desplegado en [Fly.io](https://fly.io/).  
-Solo necesitas ejecutar:
+This project can be deployed on [Fly.io](https://fly.io/).
+
+Solo necesitas ejecutar:  
+You just need to run:
 
 ```bash
 fly launch
 ```
 
-Asegúrate de tener configurado tu `.env.production` antes de desplegar.
+Asegúrate de tener configurado tu `.env.production` antes de desplegar.  
+Make sure your `.env.production` file is properly configured before deploying.
 
 ---
 
@@ -91,5 +100,3 @@ Asegúrate de tener configurado tu `.env.production` antes de desplegar.
 
 **Ricardo Orlando Castillo Olivera**  
 [LinkedIn](http://linkedin.com/in/ricardo-orlando-castillo-olivera-4b4b45162)
-
----
