@@ -16,30 +16,28 @@
       📖 Description of what the tool does
     -->
     <p class="mb-4 text-muted">
-      Esta herramienta te permite analizar múltiples XML dentro de un archivo ZIP y visualizar su contenido en formato JSON.<br/>
-      This tool allows you to analyze multiple XML files inside a ZIP and view their content as JSON.
+      Esta herramienta te permite analizar múltiples archivos XML contenidos dentro de un archivo ZIP y visualizar su
+      contenido en formato JSON.<br />
+      <strong>Importante:</strong> el ZIP debe contener una carpeta con cualquier nombre que incluya los archivos XML.
+      Ejemplo: <code>archivo.zip → carpeta → archivos.xml</code>.<br /><br />
+      This tool allows you to analyze multiple XML files inside a ZIP and view their content as JSON.<br />
+      <strong>Important:</strong> the ZIP must contain a folder (any name) that holds the XML files. Example:
+      <code>file.zip → folder → xml files</code>.
     </p>
+
 
     <!--
       📦 Componente de carga de archivos con soporte drag & drop
       📦 File upload component with drag & drop support
     -->
-    <FileDrop 
-      @file-selected="handleFileSelected" 
-      :selectedFile="selectedFile" 
-      @clear-file="clearFile" 
-    />
+    <FileDrop @file-selected="handleFileSelected" :selectedFile="selectedFile" @clear-file="clearFile" />
 
     <!--
       ⚙️ Botón para iniciar el procesamiento del archivo
       ⚙️ Button to trigger ZIP file processing
     -->
     <div class="my-3">
-      <button 
-        class="btn btn-primary px-4"
-        :disabled="!selectedFile" 
-        @click="processFile"
-      >
+      <button class="btn btn-primary px-4" :disabled="!selectedFile" @click="processFile">
         <i class="fas fa-cogs"></i> Procesar / Process
       </button>
     </div>
@@ -58,8 +56,8 @@
   </div>
 </template>
 
-  
-  <script setup>
+
+<script setup>
 // 📦 Importación de componentes del proyecto
 // 📦 Importing project components
 import FileDrop from '@/components/FileDrop.vue'
@@ -121,5 +119,4 @@ const processFile = async () => {
   }
 }
 
-  </script>
-  
+</script>

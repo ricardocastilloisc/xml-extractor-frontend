@@ -7,13 +7,23 @@
 
 ---
 
-## 🌐 Descripción / Description
+## 📘 Descripción / Description
 
-Esta es una aplicación frontend desarrollada con **Nuxt 3** y **Bootstrap 5**, que permite a los usuarios subir un archivo `.zip` que contenga múltiples archivos `.xml`.  
+Esta es una aplicación frontend desarrollada con **Nuxt 3** y **Bootstrap 5**, que permite a los usuarios subir un archivo `.zip` que contenga múltiples archivos `.xml`.
+
+📂 **Importante:** el `.zip` debe contener una **carpeta** (con cualquier nombre) que contenga los archivos XML.  
+Ejemplo: `archivo.zip → carpeta → archivos.xml`.
+
 El sistema los envía a un backend en **FastAPI**, donde se procesan y se extraen los datos de cada XML como un objeto **JSON dinámico**.  
 El resultado se visualiza directamente en pantalla, con opciones para copiar, descargar o ver en pantalla completa.
 
-This is a frontend app built with **Nuxt 3** and **Bootstrap 5**, allowing users to upload a `.zip` file containing multiple `.xml` files.  
+---
+
+This is a frontend app built with **Nuxt 3** and **Bootstrap 5**, allowing users to upload a `.zip` file containing multiple `.xml` files.
+
+📂 **Important:** the `.zip` must contain a **folder** (with any name) that includes the XML files.  
+Example: `file.zip → folder → xml files`.
+
 The system sends them to a **FastAPI** backend, where each XML is processed and returned as a **dynamic JSON object**.  
 The result is displayed on screen with options to copy, download, or view it in fullscreen.
 
